@@ -11,10 +11,10 @@ const app = express();
 const port = process.env.PORT || 5050;
 const connectionString = process.env.MONGO_URL;
 
+app.use(cors({ credentials: true, origin: "https://logintoken.onrender.com" }))
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(cors({ credentials: true, origin: "https://logintoken.onrender.com" }))
 app.use("/api", userRouter);
 
 (async () => {
