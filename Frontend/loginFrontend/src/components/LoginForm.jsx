@@ -8,7 +8,7 @@ const LoginForm = () => {
         e.preventDefault();
 
         // Send a request to the backend to login the user.
-        fetch("http://localhost:5000/api/user/login", {
+        fetch("https://backend-q7jk.onrender.com/api/user/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

@@ -15,7 +15,7 @@ const RegisterForm = () => {
             alert("The passwords do not match.");
         } else {
             // den user im backend anlegen
-            fetch("http://localhost:5000/api/user/register", {
+            fetch("https://backend-q7jk.onrender.com/api/user/register", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
