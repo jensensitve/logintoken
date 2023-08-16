@@ -11,7 +11,7 @@ export const authMiddleware = async (req, res, next) => {
     try {
         const token = authorization.split("=")[1];
         if (!token) {
-            return res.status(403).json({ msg: "Auth fehlgeschlagen kein valierder token" })
+            return res.status(401).json({ msg: "Auth fehlgeschlagen kein valierderter token" })
         }
         req.user = await validateToken(token);
         next()
