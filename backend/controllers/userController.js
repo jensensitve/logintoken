@@ -43,7 +43,7 @@ export async function loginUserController(req, res) {
             if (isMatching) {
                 const token = await createToken({ customerId: user.customerId, userId: user._id }, { expiresIn: "1h" })
                 console.log({ token });
-                return res.status(200).cookie("jwt", token, { httpOnly: true, sameSite: "None", secure: true }).json({ msg: "Login erfolgreich!" })
+                return res.status(200).cookie(/* "jwt",  */token, { httpOnly: true, sameSite: "None", secure: true }).json({ msg: "Login erfolgreich!" })
             }
             return res.status(401).json({ msg: "Login fehlgeschlagen falsche Eingabe!" })
         }
