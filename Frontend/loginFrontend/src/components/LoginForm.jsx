@@ -20,9 +20,11 @@ const LoginForm = () => {
         })
             .then(response => response.json())
             .then(user => {
-                if (user) {
+
+                if (user.msg === "Login erfolgreich!") {
                     // The user is logged in, so redirect them to the home page.
-                    alert("Sie sind eingelogged")
+                    // window.location.href = "./";
+                    alert("Logged in!");
                 } else {
                     // The user is not logged in, so show an error message.
                     alert("The username or password is incorrect.");
