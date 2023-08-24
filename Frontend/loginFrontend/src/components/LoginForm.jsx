@@ -22,7 +22,7 @@ const LoginForm = () => {
             .then(user => {
                 if (user) {
                     // The user is logged in, so redirect them to the home page.
-                    window.location.href = "./";
+                    alert("Sie sind eingelogged")
                 } else {
                     // The user is not logged in, so show an error message.
                     alert("The username or password is incorrect.");
